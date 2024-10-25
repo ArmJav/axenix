@@ -7,12 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'figma-green': '#108A00',
-        'light-green': '#D5E0D5',
-        'text': '#001E00',
-        'figma-purple': '#6F89F0',
-        'figma-grey': '#EFEFEF'
-
+        'main-orange': '#F37022'
       },
       screens: {
         tablet: '768px',
