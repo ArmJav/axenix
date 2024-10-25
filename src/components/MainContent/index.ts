@@ -1,2 +1,2 @@
-import BagContent from "./ui/BagContent.vue";
-export { BagContent };
+import MainContent from "./ui/MainContent.vue";
+export {MainContent}

@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-import {HeaderAdmin} from '@/features/HeaderAdmin';
-import { OrderContent } from '@/components/OrderContent';
+import { MainContent } from '@/components/MainContent';
 </script>
 
 
 <template>
-    <HeaderAdmin/>
-    <OrderContent/>
+    <MainContent/>
 </template>
