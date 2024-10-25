@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import locale from 'ant-design-vue/es/date-picker/locale/fr_FR';
+import locale from 'ant-design-vue/es/date-picker/locale/ru_RU';
 import { Dayjs } from 'dayjs';
 import dayjs from "dayjs";
-import "dayjs/locale/fr";
-import ruRu from "ant-design-vue/es/locale/fr_FR";
+import "dayjs/locale/ru";
+import ruRu from "ant-design-vue/es/locale/ru_RU";
 
 dayjs.locale("ru");
 const model = defineModel<Dayjs>({required: true})
