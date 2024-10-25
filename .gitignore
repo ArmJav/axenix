@@ -28,6 +28,6 @@ coverage
 *.sw?
 
 *.tsbuildinfo
-.idea
 /.idea/**
 /.idea
+.env
