@@ -6,7 +6,7 @@ const date_flight = ref()
 </script>
 
 <template>
-    <div class="flex w-full mx-[300px] gap-3 h-[50px]">
+    <div class="flex w-full justify-center gap-3 h-[50px]">
         <input type="search" class="rounded h-full p-2" placeholder="Откуда">
         <input type="search" class="rounded h-full p-2" placeholder="Куда">
         <Calendar v-model="date_flight"/>
