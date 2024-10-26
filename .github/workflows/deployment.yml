@@ -29,7 +29,10 @@ jobs:
            git clone -b ${{ secrets.MAIN_BRANCH }} ${{ 'https://github.com/ArmJav/axenix.git' }} ${{ secrets.WORK_DIR }}
           fi
           "
-      - name: stop old container
-        run: make app-down
-      - name: run new container
-        run: make app
+      - name: deploy application
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
+            cd ${{ secrets.WORK_DIR }}
+            make app-down
+            make app
+          "
