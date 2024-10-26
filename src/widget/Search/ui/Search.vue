@@ -10,7 +10,7 @@ const date_flight = ref()
         <input type="search" class="rounded h-full p-2" placeholder="Откуда">
         <input type="search" class="rounded h-full p-2" placeholder="Куда">
         <Calendar v-model="date_flight"/>
-        <button class="rounded bg-yellow w-[100px] hover:opacity-50 active:opacity-75">Найти</button>
+        <button class="rounded bg-white w-[100px] hover:opacity-50 active:opacity-75">Найти</button>
     </div>
 </template>
 
