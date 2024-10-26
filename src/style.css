@@ -4,12 +4,18 @@
 
 
 @font-face {
-  font-family: montserrat;
-  src: url(./assets/Montserrat-Regular.ttf);
+    font-family: montserrat;
+    src: url(./assets/Montserrat-Regular.ttf);
+}
+
+@layer-components {
+    .input-text {
+        @apply pl-4 w-[400p] h-[70px] rounded-2xl outline-none text-xl border-2 border-main-orange;
+    }
 }
 
 body {
-  font-family: Montserrat, sans-serif;
-  overflow-x: hidden;
-  background-color: #f1f1f1;
+    font-family: Montserrat, sans-serif;
+    overflow-x: hidden;
+    background-color: #f1f1f1;
 }
