@@ -23,7 +23,7 @@ jobs:
       - name: clone or pull repository
         run: |
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
-          if [ -d '${{ secrets.WORK_DIR }}/axenix/.git' ]; then
+          if [ -e '${{ secrets.WORK_DIR }}/axenix/.git' ]; then
            cd ${{ secrets.WORK_DIR }}/axenix && git checkout ${{ secrets.MAIN_BRANCH }} && git pull
           else
            git clone -b ${{ secrets.MAIN_BRANCH }} ${{ 'https://github.com/ArmJav/axenix.git' }} ${{ secrets.WORK_DIR }}
