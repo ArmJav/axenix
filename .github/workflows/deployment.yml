@@ -25,3 +25,5 @@ jobs:
       - name: deploy application
         run: |
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }}/axenix && make app-down && make app && make app run && exit"
+      - name: Success
+        run: echo "Success"
