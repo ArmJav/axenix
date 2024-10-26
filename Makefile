@@ -9,6 +9,10 @@ APP_CONTAINER = frontend-vue
 app:
 	$(DC) -f $(APP_FILE) $(ENV) up --build -d
 
+.PHONY: app-run
+app-run:
+    docker run -d -p 3337:80 axenix-web
+
 .PHONY: app-down
 app-down:
 	$(DC) -f $(APP_FILE) down
