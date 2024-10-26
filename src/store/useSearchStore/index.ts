@@ -1,7 +1,7 @@
 import { ref } from "vue";
 import { defineStore } from "pinia";
 
-export const useSearchStore = defineStore("Search", () => {
+export const useSearchStore = defineStore("search", () => {
   
   //Product param
   const shelf = ref<number>(0)
@@ -14,9 +14,20 @@ export const useSearchStore = defineStore("Search", () => {
   const arrival_from = ref<number>(0)
   const arrival_to = ref<number>(0)
   
+  const setArrivalTo = (value: number) => {
+    arrival_to.value = value;
+  };
+
+  const setArrivalFrom = (value: number) => {
+    arrival_from.value = value;
+  };
+
+  const setDepartureto = (value: number) => {
+    departure_to.value = value;
+  };
 
   const setDepartureFrom = (value: number) => {
-    seats.value = value;
+    departure_from.value = value;
   };
   const setSeats = (value: number) => {
     seats.value = value;
@@ -59,6 +70,15 @@ export const useSearchStore = defineStore("Search", () => {
   }
 
   return {
+    setArrivalFrom,
+    setArrivalTo,
+    setClassOfService,
+    setCostFrom,
+    setCostTo,
+    setDepartureFrom,
+    setDepartureto,
+    setSeats,
+    setShelf,
     generateQuery,
     $clear 
   };
