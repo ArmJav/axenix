@@ -11,6 +11,13 @@ export default {
         'light-grey-text': '#878786',
         'button-green': '#5EA350',
         'light-grey-button': '#E0E0E0',
+        'figma-green': '#108A00',
+        'light-green': '#D5E0D5',
+        'text': '#001E00',
+        'figma-purple': '#6F89F0',
+        'figma-grey': '#878786',
+        'yellow': '#F37022',
+        'pixso-grey': '#E0E0E0'
       },
       screens: {
         tablet: '768px',

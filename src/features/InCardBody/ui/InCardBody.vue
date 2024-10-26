@@ -11,9 +11,9 @@ defineProps<Props>()
 
 </script>
 <template>
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-3">
         <div v-if="lable_one" class="flex flex-col">
-            <p class="text-[12px]">
+            <p class="text-[14px] text-light-grey-text w-fit">
                 {{ lable_one }}
             </p>
             <p class="pl-5">
@@ -21,7 +21,7 @@ defineProps<Props>()
             </p>
         </div>
         <div v-if="lable_two" class="flex flex-col">
-            <p class="text-[12px]">
+            <p class="text-[14px] text-light-grey-text">
                 {{ lable_two }}
             </p>
             <p class="pl-5">
