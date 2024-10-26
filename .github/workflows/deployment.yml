@@ -23,10 +23,12 @@ jobs:
       - name: clone or pull repository
         run: |
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
-          if [ -e '${{ secrets.WORK_DIR }}/axenix/.git' ]; then
-           cd ${{ secrets.WORK_DIR }}/axenix && git checkout ${{ secrets.MAIN_BRANCH }} && git pull
+          if [ -d '${{ secrets.WORK_DIR }}' ] && [ -n \"\$(find '${{ secrets.WORK_DIR }}' -mindepth 1 -print -quit)\" ]; then
+            echo 'Папка не пуста, выполняем git pull...'
+            cd '${{ secrets.WORK_DIR }}/axenix' && git checkout '${{ secrets.MAIN_BRANCH }}' && git pull
           else
-           git clone -b ${{ secrets.MAIN_BRANCH }} ${{ 'https://github.com/ArmJav/axenix.git' }} ${{ secrets.WORK_DIR }}
+            echo 'Папка пуста, выполняем git clone...'
+            git clone -b '${{ secrets.MAIN_BRANCH }}' 'https://github.com/ArmJav/axenix.git' '${{ secrets.WORK_DIR }}'
           fi
           "
       - name: deploy application
