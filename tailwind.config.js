@@ -11,8 +11,9 @@ export default {
         'light-green': '#D5E0D5',
         'text': '#001E00',
         'figma-purple': '#6F89F0',
-        'figma-grey': '#EFEFEF',
-        'yellow': '#F37022'
+        'figma-grey': '#878786',
+        'yellow': '#F37022',
+        'pixso-grey': '#E0E0E0'
 
       },
       screens: {
